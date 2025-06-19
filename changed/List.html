@@ -1,0 +1,56 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="content">
+    <div class="gesru-events">
+         <div class="gesru-events-forms formularbox mb-2">
+                 <f:form id="eventSearch"  pluginName="Eventlist" action="list" controller="Event" enctype="multipart/form-data" class="form form-horizontal">
+
+                    <div class="form-group mb-0">
+                        <div class="row">
+
+                            <!--  -->
+                            <div class="col-xs-12 col-sm-4">
+                                <input type="text" placeholder="Search" class="form-control"  name="tx_gesru_eventlist[search]" value="">
+                            </div>
+                            <!--  -->
+                            <!--  -->
+                            <div class="col-xs-12 col-sm-4">
+                                <input type="text" placeholder="Date" class="form-control datepicker"  name="tx_gesru_eventlist[date]" value="">
+                            </div>
+                            <!--  -->
+                            <!--  -->
+                            <div class="col-xs-12 col-sm-2">
+                                <input type="button" name="submit_event" id="submit_event" value="Search" class="btn btn-success btn-block search-btn">
+                            </div>
+                            <!--  -->
+                            <!--  -->
+                            <div class="col-xs-12 col-sm-2">
+                                <input type="button" name="submit_reset" id="submit_reset" value="Reset" class="btn btn-success btn-block reset">
+                            </div>
+                            <!--  -->
+
+                        </div>
+                    </div>
+
+                    
+                    
+                    
+                    
+                </f:form>
+        </div>    
+         <div class="gesru-events-result">
+
+             <f:if condition="{events}">
+                <f:then>
+                    <f:render partial="Event/Elist" arguments="{_all}" />
+                </f:then>
+                <f:else> 
+                    <p class="text-center">No events</p>
+                </f:else>
+            </f:if>
+                
+        </div>    
+    </div> 
+
+</f:section>
+</html>

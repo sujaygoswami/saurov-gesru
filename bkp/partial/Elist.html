@@ -1,0 +1,16 @@
+<f:for each="{events}" key="pkey" as="pval" iteration="fooIterator">
+    <div class="gesru-events-lists">
+        <h1>{pval.title}</h1>
+        <p>infopup: {pval.mapaddress}</p>
+<f:if condition="{pval.image}">
+<p><f:image image="{pval.image}"  /></p>
+</f:if>
+<p>
+        <f:format.crop maxCharacters="200" respectWordBoundaries="true" respectHtml="true">
+                <f:format.stripTags>{pval.description}</f:format.stripTags>
+        </f:format.crop>
+</p>
+<f:link.page pageUid="{settings.eventDetailsPid}"
+                additionalParams="{tx_gesru_eventdetails:{controller:'Event',action:'details',uid:pval.uid}}" absolute="1">More</f:link.page>
+</div>
+</f:for>

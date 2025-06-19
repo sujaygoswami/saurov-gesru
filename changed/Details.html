@@ -1,0 +1,33 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="content">
+     <f:if condition="{uid}>0">
+            
+     
+
+      <h1>{event.title}</h1>
+
+        <f:if condition="{event.image}">
+        <p><f:image image="{event.image}"  /></p>
+        </f:if>
+         <f:if condition="{event.venue}">
+            <f:format.html>{event.venue}</f:format.html>
+        </f:if>
+        <f:if condition="{event.organizer}">
+            <f:format.html>{event.organizer}</f:format.html>
+        </f:if>
+        <f:if condition="{event.website}">
+           <p>{event.website}</p>
+        </f:if>
+         <f:if condition="{event.copywriter}">
+           <p>{event.copywriter}</p>
+        </f:if>
+         <f:if condition="{event.description}">
+            <f:format.html>{event.description}</f:format.html>
+        </f:if>
+
+
+
+    </f:if>
+</f:section>
+</html>

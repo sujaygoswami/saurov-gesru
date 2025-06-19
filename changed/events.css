@@ -1,0 +1,63 @@
+.gesru-events .mb-0 {
+  margin-bottom: 0px !important;
+}
+.gesru-events .mb-1 {
+  margin-bottom: 20px;
+}
+.gesru-events .mb-2 {
+  margin-bottom: 40px;
+}
+.gesru-events .p-1 {
+  padding: 25px;
+}
+.gesru-events .bg-white {
+  background-color: white;
+}
+.gesru-events .gesru-events-forms.formularbox {
+  padding: 25px;
+}
+.gesru-events .gesru-events-forms.formularbox .form-group {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.gesru-events .gesru-events-forms.formularbox .form-control.datepicker {
+  padding-left: 30px;
+  background-image: url(../Images/calender-svgrepo-dark.svg);
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+}
+.gesru-events .gesru-events-forms.formularbox .btn.reset {
+  font-size: 0px;
+  background-image: url(../Images/close-svgrepo-white.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 36.27px;
+  background-size: 30px;
+}
+.gesru-events .gesru-events-forms.formularbox .btn.search-btn {
+  background-image: url(../Images/search-svgrepo-white.svg);
+  background-repeat: no-repeat;
+  background-position: left 10px center;
+  background-size: 20px;
+}
+.gesru-events .gesru-events-result .listing-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.gesru-events .gesru-events-result .excerpt h1 {
+  color: inherit;
+  padding-top: 5px;
+}
+.gesru-events .gesru-events-result .excerpt h1:before {
+  background-color: #06BC5B;
+}
+.gesru-events .gesru-events-result .detail .btn:after {
+  content: ' ';
+  background-image: url(../Images/right-arrow-svgrepo-white.svg);
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 25px;
+  padding-right: 25px;
+}

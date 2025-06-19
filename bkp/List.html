@@ -1,0 +1,28 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="content">
+    <div class="gesru-events">
+         <div class="gesru-events-forms">
+                 <f:form id="eventSearch"  pluginName="Eventlist" action="list" controller="Event" enctype="multipart/form-data">
+                    <input type="text" placeholder="Search" class="text-input"  name="tx_gesru_eventlist[search]" value="">
+                    <input type="text" placeholder="Date" class="text-input"  name="tx_gesru_eventlist[date]" value="">
+                    <input type="button" name="submit_event" id="submit_event" value="Search">
+                    <input type="button" name="submit_reset" id="submit_reset" value="Reset">
+                </f:form>
+        </div>    
+         <div class="gesru-events-result">
+
+             <f:if condition="{events}">
+                <f:then>
+                    <f:render partial="Event/Elist" arguments="{_all}" />
+                </f:then>
+                <f:else> 
+                    <p class="text-center">No events</p>
+                </f:else>
+            </f:if>
+                
+        </div>    
+    </div> 
+
+</f:section>
+</html>

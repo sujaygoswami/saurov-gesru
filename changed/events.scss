@@ -1,0 +1,96 @@
+.gesru-events{
+
+    .mb-0{
+        margin-bottom: 0px !important;
+    }
+
+    .mb-1{
+        margin-bottom: 20px;
+    }
+
+    .mb-2{
+        margin-bottom: 40px;
+    }
+
+    .p-1{
+        padding: 25px;
+    }
+
+    .bg-white{
+        background-color: white;
+    }
+
+    .gesru-events-forms{
+        &.formularbox{
+            padding: 25px;
+
+            .form-group{
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+
+            .form-control{
+                &.datepicker{
+                    padding-left: 30px;
+                    background-image: url(../Images/calender-svgrepo-dark.svg);
+                    background-position: left center;
+                    background-repeat: no-repeat;
+                    background-size: 20px;
+                }
+            }
+
+            .btn{
+                &.reset{
+                    font-size: 0px;
+                    background-image: url(../Images/close-svgrepo-white.svg);
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    height: 36.27px;
+                    background-size: 30px;
+                }
+
+                &.search-btn{
+                    background-image: url(../Images/search-svgrepo-white.svg);
+                    background-repeat: no-repeat;
+                    background-position: left 10px center;
+                    background-size: 20px;
+                }
+            }
+
+            
+        }
+    }
+
+    .gesru-events-result{
+        .listing-img{
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .excerpt{
+            h1{
+                color: inherit;
+                padding-top: 5px;
+
+                &:before{
+                    background-color: #06BC5B;
+                }
+            }
+        }
+
+        .detail{
+            .btn{
+                &:after{
+                    content: ' ';
+                    background-image: url(../Images/right-arrow-svgrepo-white.svg);
+                    background-position: right center;
+                    background-repeat: no-repeat;
+                    background-size: 25px;
+                    padding-right: 25px;
+                }
+            }
+        }
+    }
+
+}
