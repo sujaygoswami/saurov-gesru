@@ -1,7 +1,7 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 <f:layout name="Default" />
 <f:section name="content">
-    <div class="gesru-events">
+    <div class="gesru-events ext-custom-tooltip gesru-ext-global">
          <div class="gesru-events-forms formularbox mb-2">
                  <f:form id="eventSearch"  pluginName="Eventlist" action="list" controller="Event" enctype="multipart/form-data" class="form form-horizontal">
 
@@ -9,23 +9,28 @@
                         <div class="row">
 
                             <!--  -->
-                            <div class="col-xs-12 col-sm-4">
-                                <input type="text" placeholder="Search" class="form-control"  name="tx_gesru_eventlist[search]" value="">
+                            <div class="col-xs-12 col-md-3 col-sm-4 tab-mb">
+                                <input type="text" id="tx_gesru_eventlist_search" placeholder="Suche nach ..." class="form-control"  name="tx_gesru_eventlist[search]" value="{search}">
                             </div>
                             <!--  -->
                             <!--  -->
-                            <div class="col-xs-12 col-sm-4">
-                                <input type="text" placeholder="Date" class="form-control datepicker"  name="tx_gesru_eventlist[date]" value="">
+                            <div class="col-xs-12 col-md-3 col-sm-4 tab-mb">
+                                <input type="text" id="tx_gesru_eventlist_fromdate" placeholder="From Datum" class="form-control datepicker"  name="tx_gesru_eventlist[fromdate]" value="{fromdate}">
+                            </div>
+                            <!--  -->
+                             <!--  -->
+                            <div class="col-xs-12 col-md-3 col-sm-4 tab-mb">
+                                <input type="text" id="tx_gesru_eventlist_todate" placeholder="To Datum" class="form-control datepicker"  name="tx_gesru_eventlist[todate]" value="{todate}">
                             </div>
                             <!--  -->
                             <!--  -->
-                            <div class="col-xs-12 col-sm-2">
-                                <input type="button" name="submit_event" id="submit_event" value="Search" class="btn btn-success btn-block search-btn">
+                            <div class="col-xs-6 col-md-2 col-sm-3">
+                                <input type="button" name="submit_event" id="submit_event" value="Suchen" class="btn btn-success btn-block search-btn">
                             </div>
                             <!--  -->
                             <!--  -->
-                            <div class="col-xs-12 col-sm-2">
-                                <input type="button" name="submit_reset" id="submit_reset" value="Reset" class="btn btn-success btn-block reset">
+                            <div class="col-xs-6 col-md-1 col-sm-2">
+                                <input type="button" name="submit_reset" id="submit_reset" value="" class="btn btn-success btn-block reset">
                             </div>
                             <!--  -->
 

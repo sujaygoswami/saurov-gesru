@@ -3,7 +3,7 @@
 
         <div class="row">
             <!--  -->
-            <div class="col-xs-12 col-sm-4">
+            <div class="col-xs-12 col-sm-4 mobile-mb">
                 <f:if condition="{pval.image}">
                         <f:image image="{pval.image}" class="listing-img"  />
                 </f:if>
@@ -14,7 +14,7 @@
             <div class="col-xs-12 col-sm-8">
                 <div class="excerpt">
                         <h1>{pval.title}</h1>
-                        <p>infopup: {pval.mapaddress}</p>
+                        <p class="tooltips mb-1 info-tip map-marker" tooltip="Palais Liechtenstein<br>6800 Feldkirch">infopup: {pval.mapaddress}</p>
                 </div>
                 <div class="detail">
                         <p>
@@ -22,14 +22,8 @@
                                         <f:format.stripTags>{pval.description}</f:format.stripTags>
                                 </f:format.crop>
                         </p>
-                        <p>
-                                <f:format.crop maxCharacters="200" respectWordBoundaries="true" respectHtml="true">
-                                        <f:format.stripTags>{pval.description}</f:format.stripTags>
-                                </f:format.crop>
-                        </p>
-                        
                         <f:link.page pageUid="{settings.eventDetailsPid}"
-                additionalParams="{tx_gesru_eventdetails:{controller:'Event',action:'details',uid:pval.uid}}" absolute="1" class="btn btn-success">More</f:link.page>
+                additionalParams="{tx_gesru_eventdetails:{controller:'Event',action:'details',uid:pval.uid}}" absolute="1" class="btn btn-success">mehr lesen</f:link.page>
                 </div>
             </div>
             <!--  -->

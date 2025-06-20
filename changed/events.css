@@ -1,18 +1,225 @@
-.gesru-events .mb-0 {
+@media screen and (max-width: 991px) {
+  .gesru-ext-global .tab-mb {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .gesru-ext-global .mobile-mb {
+    margin-bottom: 20px;
+  }
+}
+.gesru-ext-global .btn:after {
+  content: ' ' !important;
+  background-image: url(../Images/right-arrow-svgrepo-white.svg);
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 25px;
+  padding-right: 25px;
+}
+.gesru-ext-global .btn.back-btn::after {
+  display: none;
+}
+.gesru-ext-global .btn.back-btn:before {
+  content: ' ' !important;
+  background-image: url(../Images/left-arrow-svgrepo-white.svg);
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 25px;
+  padding-right: 25px;
+  position: static;
+  background-color: transparent;
+  margin-right: 5px;
+}
+.gesru-ext-global .mb-0 {
   margin-bottom: 0px !important;
 }
-.gesru-events .mb-1 {
+.gesru-ext-global .mb-1 {
   margin-bottom: 20px;
 }
-.gesru-events .mb-2 {
+.gesru-ext-global .mb-2 {
   margin-bottom: 40px;
 }
-.gesru-events .p-1 {
+.gesru-ext-global .p-1 {
   padding: 25px;
 }
-.gesru-events .bg-white {
+.gesru-ext-global .bg-white {
   background-color: white;
 }
+.gesru-ext-global .text-color-primary {
+  color: #06BC5B;
+}
+
+.ext-custom-tooltip .tooltips {
+  position: relative;
+  display: inline;
+}
+.ext-custom-tooltip .tooltips span {
+  font: 300 12px 'Open Sans', sans-serif;
+  position: absolute;
+  color: #FFFFFF;
+  background: #000000;
+  padding: 5px 10px;
+  width: 140px;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity .6s, margin-left .2s, margin-top .2s, -webkit-transform .3s;
+  transition: opacity .6s, margin-left .2s, margin-top .2s, -webkit-transform .3s;
+  transition: transform .3s, opacity .6s, margin-left .2s, margin-top .2s;
+  transition: transform .3s, opacity .6s, margin-left .2s, margin-top .2s, -webkit-transform .3s;
+}
+.ext-custom-tooltip .tooltips > span img {
+  max-width: 140px;
+}
+.ext-custom-tooltip .tooltips[tooltip-position="top"] span {
+  margin-left: 10px;
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+.ext-custom-tooltip .tooltips[tooltip-position="bottom"] span {
+  -webkit-transform: rotate(-30deg);
+  transform: rotate(-30deg);
+}
+.ext-custom-tooltip .tooltips[tooltip-position="left"] span {
+  margin-top: 30px;
+  -webkit-transform: rotate(-30deg);
+  transform: rotate(-30deg);
+}
+.ext-custom-tooltip .tooltips[tooltip-position="right"] span {
+  margin-top: 30px;
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+.ext-custom-tooltip .tooltips span:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+.ext-custom-tooltip .tooltips[tooltip-position="top"] span:after {
+  top: 100%;
+  left: 50%;
+  margin-left: -8px;
+  border-top: 8px solid black;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+}
+.ext-custom-tooltip .tooltips[tooltip-position="bottom"] span:after {
+  bottom: 100%;
+  left: 50%;
+  margin-left: -8px;
+  border-bottom: 8px solid black;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+}
+.ext-custom-tooltip .tooltips[tooltip-position="left"] span:after {
+  top: 50%;
+  left: 100%;
+  margin-top: -8px;
+  border-left: 8px solid black;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+.ext-custom-tooltip .tooltips[tooltip-position="right"] span:after {
+  top: 50%;
+  right: 100%;
+  margin-top: -8px;
+  border-right: 8px solid black;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+.ext-custom-tooltip .tooltips:hover span {
+  visibility: visible;
+  opacity: 1;
+  z-index: 999;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  filter: alpha(opacity=100);
+}
+.ext-custom-tooltip .tooltips[tooltip-position="top"]:hover span {
+  bottom: 30px;
+  left: 50%;
+  margin-left: -76px;
+}
+.ext-custom-tooltip .tooltips[tooltip-position="bottom"]:hover span {
+  top: 30px;
+  left: 50%;
+  margin-left: -76px;
+}
+.ext-custom-tooltip .tooltips[tooltip-position="left"]:hover span {
+  right: 100%;
+  top: 50%;
+  margin-top: -15px;
+  margin-right: 15px;
+}
+.ext-custom-tooltip .tooltips[tooltip-position="right"]:hover span {
+  left: 100%;
+  top: 50%;
+  margin-top: -15px;
+  margin-left: 15px;
+}
+.ext-custom-tooltip .tooltips[tooltip-type="primary"] > span {
+  background-color: #2980b9;
+}
+.ext-custom-tooltip .tooltips[tooltip-type="primary"][tooltip-position="top"] > span:after {
+  border-top: 8px solid #2980b9;
+}
+.ext-custom-tooltip .tooltips[tooltip-type="primary"][tooltip-position="bottom"] > span:after {
+  border-bottom: 8px solid #2980b9;
+}
+.ext-custom-tooltip .tooltips[tooltip-type="primary"][tooltip-position="left"] > span:after {
+  border-left: 8px solid #2980b9;
+}
+.ext-custom-tooltip .tooltips[tooltip-type="primary"][tooltip-position="right"] > span:after {
+  border-right: 8px solid #2980b9;
+}
+.ext-custom-tooltip .tooltips[tooltip-type="success"] > span {
+  background-color: #27ae60;
+}
+.ext-custom-tooltip .tooltips[tooltip-type="success"][tooltip-position="top"] > span:after {
+  border-top: 8px solid #27ae60;
+}
+.ext-custom-tooltip .tooltips[tooltip-type="success"][tooltip-position="bottom"] > span:after {
+  border-bottom: 8px solid #27ae60;
+}
+.ext-custom-tooltip .tooltips[tooltip-type="success"][tooltip-position="left"] > span:after {
+  border-left: 8px solid #27ae60;
+}
+.ext-custom-tooltip .tooltips[tooltip-type="success"][tooltip-position="right"] > span:after {
+  border-right: 8px solid #27ae60;
+}
+.ext-custom-tooltip .tooltips[tooltip-type="warning"] > span {
+  background-color: #f39c12;
+}
+.ext-custom-tooltip .tooltips[tooltip-type="warning"][tooltip-position="top"] > span:after {
+  border-top: 8px solid #f39c12;
+}
+.ext-custom-tooltip .tooltips[tooltip-type="warning"][tooltip-position="bottom"] > span:after {
+  border-bottom: 8px solid #f39c12;
+}
+.ext-custom-tooltip .tooltips[tooltip-type="warning"][tooltip-position="left"] > span:after {
+  border-left: 8px solid #f39c12;
+}
+.ext-custom-tooltip .tooltips[tooltip-type="warning"][tooltip-position="right"] > span:after {
+  border-right: 8px solid #f39c12;
+}
+.ext-custom-tooltip .tooltips[tooltip-type="danger"] > span {
+  background-color: #c0392b;
+}
+.ext-custom-tooltip .tooltips[tooltip-type="danger"][tooltip-position="top"] > span:after {
+  border-top: 8px solid #c0392b;
+}
+.ext-custom-tooltip .tooltips[tooltip-type="danger"][tooltip-position="bottom"] > span:after {
+  border-bottom: 8px solid #c0392b;
+}
+.ext-custom-tooltip .tooltips[tooltip-type="danger"][tooltip-position="left"] > span:after {
+  border-left: 8px solid #c0392b;
+}
+.ext-custom-tooltip .tooltips[tooltip-type="danger"][tooltip-position="right"] > span:after {
+  border-right: 8px solid #c0392b;
+}
+
 .gesru-events .gesru-events-forms.formularbox {
   padding: 25px;
 }
@@ -49,15 +256,115 @@
 .gesru-events .gesru-events-result .excerpt h1 {
   color: inherit;
   padding-top: 5px;
+  margin-bottom: 10px;
 }
 .gesru-events .gesru-events-result .excerpt h1:before {
   background-color: #06BC5B;
 }
-.gesru-events .gesru-events-result .detail .btn:after {
+.gesru-events .gesru-events-result .excerpt .info-tip {
+  display: inline-block;
+  padding: 2px 5px;
+  background-color: #06BC5B;
+  color: white;
+  font-size: 14px;
+  border-radius: 5px;
+}
+.gesru-events .gesru-events-result .excerpt .info-tip.map-marker:before {
   content: ' ';
-  background-image: url(../Images/right-arrow-svgrepo-white.svg);
-  background-position: right center;
+  width: 15px;
+  height: 15px;
+  background-image: url(../Images/pointer-map-pointer-svgrepo-white.svg);
   background-repeat: no-repeat;
-  background-size: 25px;
-  padding-right: 25px;
+  background-position: left top;
+  background-size: 15px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 5px;
+  margin-top: 6px;
+}
+.gesru-events .gesru-events-result .excerpt .info-tip.map-marker:after {
+  content: ' ';
+  width: 15px;
+  height: 15px;
+  background-image: url(../Images/info-circle-svgrepo-white.svg);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 15px;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 5px;
+  margin-top: 6px;
+}
+
+.gesru-events-detail {
+  margin-top: 40px;
+  background-color: white;
+  padding: 25px;
+}
+.gesru-events-detail .detail-bild img {
+  width: 100%;
+  height: auto;
+}
+.gesru-events-detail .detail-info-card {
+  background-color: #06BC5B;
+  color: white;
+  height: 100%;
+}
+.gesru-events-detail .detail-info-card.trans-bg {
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
+}
+.gesru-events-detail .detail-info-card.trans-bg .detail-event-info.venue-place p:before {
+  background-image: url(../Images/pointer-map-pointer-svgrepo-dark.svg);
+}
+.gesru-events-detail .detail-info-card.trans-bg .detail-event-info.venue-org p:before {
+  background-image: url(../Images/users-svgrepo-dark.svg);
+}
+.gesru-events-detail .detail-info-card .spl-head {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: white;
+}
+.gesru-events-detail .detail-info-card .detail-event-info p {
+  position: relative;
+  padding-left: 30px;
+}
+.gesru-events-detail .detail-info-card .detail-event-info p a {
+  color: white;
+}
+.gesru-events-detail .detail-info-card .detail-event-info p:before {
+  content: ' ';
+  position: absolute;
+  left: 0px;
+  top: 4px;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: left top;
+  width: 20px;
+  height: 20px;
+}
+.gesru-events-detail .detail-info-card .detail-event-info.venue-place p:before {
+  background-image: url(../Images/pointer-map-pointer-svgrepo-white.svg);
+}
+.gesru-events-detail .detail-info-card .detail-event-info.venue-org p:before {
+  background-image: url(../Images/users-svgrepo-white.svg);
+}
+.gesru-events-detail .detail-info-card .detail-event-info.venue-website p:before {
+  background-image: url(../Images/website-ui-web-svgrepo-white.svg);
+}
+.gesru-events-detail .detail-info-card .detail-event-info.venue-copyright p:before {
+  background-image: url(../Images/copyright-svgrepo-white.svg);
+}
+.gesru-events-detail .detail-title {
+  text-align: center;
+}
+.gesru-events-detail .detail-title h1 {
+  display: inline-block;
+  padding-bottom: 0px;
+  color: #06BC5B;
+  font-weight: 600;
+}
+.gesru-events-detail .detail-title h1:before {
+  display: none;
 }
