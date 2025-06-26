@@ -7,29 +7,39 @@
 
                     <div class="form-group mb-0">
                         <div class="row">
+                             <!--  -->
+                            <div class="col-xs-12 col-md-3 col-sm-6 tab-mb">
+                               <select id="tx_gesru_eventlist_cat" class="form-control"  name="tx_gesru_eventlist[cat]" >
+                                    <option value="">Bitte Kategorie auswählen</option>
+                                    <f:for each="{ecategorys}" as="ecat">
+                                        <option value="{ecat.uid}" <f:if condition="{ecat.uid}=={cat}">selected</f:if> >{ecat.title}</option>
+                                    </f:for>
+                                </select>
+                            </div>
+                            <!--  -->
 
                             <!--  -->
-                            <div class="col-xs-12 col-md-3 col-sm-4 tab-mb">
+                            <div class="col-xs-12 col-md-2 col-sm-6 tab-mb">
                                 <input type="text" id="tx_gesru_eventlist_search" placeholder="Suche nach ..." class="form-control"  name="tx_gesru_eventlist[search]" value="{search}">
                             </div>
                             <!--  -->
                             <!--  -->
-                            <div class="col-xs-12 col-md-3 col-sm-4 tab-mb">
+                            <div class="col-xs-12 col-md-2 col-sm-6 tab-mb">
                                 <input type="text" id="tx_gesru_eventlist_fromdate" placeholder="From Datum" class="form-control datepicker"  name="tx_gesru_eventlist[fromdate]" value="{fromdate}">
                             </div>
                             <!--  -->
                              <!--  -->
-                            <div class="col-xs-12 col-md-3 col-sm-4 tab-mb">
+                            <div class="col-xs-12 col-md-2 col-sm-6 tab-mb">
                                 <input type="text" id="tx_gesru_eventlist_todate" placeholder="To Datum" class="form-control datepicker"  name="tx_gesru_eventlist[todate]" value="{todate}">
                             </div>
                             <!--  -->
                             <!--  -->
-                            <div class="col-xs-6 col-md-2 col-sm-3">
+                            <div class="col-xs-6 col-md-2 col-sm-6">
                                 <input type="button" name="submit_event" id="submit_event" value="Suchen" class="btn btn-success btn-block search-btn">
                             </div>
                             <!--  -->
                             <!--  -->
-                            <div class="col-xs-6 col-md-1 col-sm-2">
+                            <div class="col-xs-6 col-md-1 col-sm-6">
                                 <input type="button" name="submit_reset" id="submit_reset" value="" class="btn btn-success btn-block reset">
                             </div>
                             <!--  -->
