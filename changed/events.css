@@ -220,6 +220,18 @@
   border-right: 8px solid #c0392b;
 }
 
+.gesru-events .datum-text:before {
+  content: ' ';
+  width: 20px;
+  height: 20px;
+  background-image: url(../Images/calender-svgrepo-dark.svg);
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  margin-right: 5px;
+  vertical-align: sub;
+  display: inline-block;
+}
 .gesru-events .gesru-events-forms.formularbox {
   padding: 25px;
 }
@@ -355,6 +367,9 @@
 }
 .gesru-events-detail .detail-info-card .detail-event-info.venue-copyright p:before {
   background-image: url(../Images/copyright-svgrepo-white.svg);
+}
+.gesru-events-detail .detail-info-card .detail-event-info.venue-datum p:before {
+  background-image: url(../Images/calender-svgrepo-white.svg);
 }
 .gesru-events-detail .detail-title {
   text-align: center;

@@ -1,4 +1,5 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+     {namespace event=Gesru\Gesru\ViewHelpers}
 <f:layout name="Default" />
 <f:section name="content">
     <f:if condition="{uid}>0">
@@ -6,11 +7,10 @@
 
         <div class="gesru-events-detail gesru-ext-global">
 
-            <f:link.page pageUid="{settings.eventDetailsPid}"
-                additionalParams="{tx_gesru_eventdetails:{controller:'Event',action:'details',uid:pval.uid}}" absolute="1" class="btn btn-success back-btn">Zuruk</f:link.page>
+            <f:link.page pageUid="{settings.eventPid}" absolute="1" class="btn btn-success back-btn">zur&uuml;ck</f:link.page>
 
             <div class="detail-title mb-2">
-                <h1>"{event.title}"</h1>
+                <h1>{event.title}</h1>
             </div>
 
             <div class="row mb-2">
@@ -39,10 +39,13 @@
                                 <f:format.html>{event.organizer}</f:format.html>
                             </div>
                         </f:if>
-
+                        <div class="detail-event-info venue-datum">
+                            <p>Datum: <event:date sdate="{event.sdate}" edate="{event.edate}" />
+                        </div>
+                         
                         <f:if condition="{event.website}">
                             <div class="detail-event-info venue-website">
-                                <p>{event.website}</p>
+                                <p><a href="{event.website}" target="_blank"> {event.website}</a></p>
                             </div>
                         </f:if>
 
@@ -68,9 +71,8 @@
             </f:if>
             </div>
 
+        <f:if condition="{show_venue}">
             <div class="row mb-2">
-
-
                 <!--  -->
                 <div class="col-xs-12">
                     <div class="detail-info-card p-1 trans-bg">
@@ -100,17 +102,30 @@
                         </div>
 
 
-
-
-
-
-
                     </div>
 
                 </div>
                 <!--  -->
 
             </div>
+            </f:if>
+            <f:if condition="{show_map}">
+             <div class="row mb-2">
+                <!--  -->
+                <div class="col-xs-12">
+    <div class="addressMap" id="addressMap"
+       data-map_center_lat="{event.latitude}" 
+       data-map_center_lon="{event.longitude}"
+       data-title="{event.title}"
+       style="width: 100%; height: 400px;" 
+       ></div>
+       <script  src="https://maps.googleapis.com/maps/api/js?key={settings.google_map_key}&callback=initMap"></script>
+    
+
+                 </div>
+            </div>
+</f:if>
+
         </div>
 
 
